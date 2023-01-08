@@ -1,0 +1,16 @@
+Este  es un texto de prueba  .  La idea  , es eliminar espacios   ; antes de un punto , antes   de un  punto , antes de una  coma  y  eliminar  espacios  duplicados   .
+Además.Es importante agregar espacios despues de un punto seguido,despues de una coma;y despues de un punto y coma (en  el  caso  que  no  lo     tuviera).
+Luego,guardar el  texto  nuevo  en  un archivo nuevo, con el mismo nombre que el archivo anterior,agregándole al final la fecha y hora en formato [NOMBRE ORIGINAL]_[YYYYMMDDHHmm].[extensión]
+
+Además, generar un archivo de reporte de corrección con el mismo nombre del archivo corregido pero con extensión .log con los sig datos:
+- Cantidad de correcciones realizadas.
+- Cantidad de inconsistencias por símbolos dispares ("()", "¿?", "¡!"). Solo tomar la diferencia entre los signos de apertura y cierre sin mayor análisis sintáctico.
+
+Este texto es para el apartado de símbolos dispares:
+¿¿¿¿¿¡¡¡¡¡((((
+
+Se deberían encontrar 14 inconsistencias.
+
+Además, validar que el archivo pasado por parámetro sea texto plano.
+
+Ejemplo de llamada: "./Corrector.sh -in [archivo]"
