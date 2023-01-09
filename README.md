@@ -66,3 +66,88 @@ Para tener en cuenta:
 
 • Los subdirectorios “extensión” deben tener el nombre en mayúscula.
 
+### generar_json_notas.bash:
+
+Cada vez que llegaba una fecha de final, una universidad tenía el mismo problema: todas las materias dictadas entregaban las actas de final en papel para luego ser cargadas manualmente en el sistema central de actas. Este proceso, además de lento, contaba con un elevado número de errores, en su mayoría involuntarios.
+
+Para agilizar este proceso, se decidió crear un sistema al que los profesores pudieran mandar las actas de manera digital. El flujo del sistema es el siguiente:
+
+• Luego de tomar un final, el jefe de cátedra de cada materia crea un archivo en formato CSV con una fila por alumno y en donde se informa DNI y las notas de cada uno de los puntos del examen (B, R o M).
+
+• Este archivo se sube a una web y es almacenado en un directorio a la espera de su procesamiento.
+
+• Cada sábado a las 23:45hs, corre un script que procesa todos los CSV subidos (uno por mesa de examen) y genera un archivo JSON con las notas de los alumnos que rindieron final esa semana.
+
+• El archivo JSON es luego leído por el sistema central de actas
+
+Como grupo de alumnos que participa de un voluntariado de ayuda en la universidad, se ofrecen para programar un script que realice el procesamiento de las notas y genere el archivo JSON. El script recibirá los siguientes parámetros:
+
+• --notas: Directorio en el que se encuentran los archivos CSV.
+
+• --salida: Ruta del archivo JSON a generar (incluye nombre del archivo). Para tener en cuenta:
+
+  • Cada archivo CSV representa una fecha de final, por lo tanto, tendrá las notas de todos los ejercicios de los alumnos que se presentaron a rendir. Los ausentes no están listados.
+
+  • El nombre del archivo CSV es el código de la materia y la fecha de final, separados por un “_”. Ej: “1115_20210317.csv”.
+
+  • La cantidad de ejercicios por final es variable entre materias (una materia siempre tiene la misma cantidad de ejercicios). Esto quiere decir que la cantidad de columnas que tiene cada archivo CSV no tiene porqué ser la misma.
+
+  • Se genera un único archivo JSON que contiene la información de todas las materias y alumnos que rindieron durante la semana. Es decir, puede haber materias y alumnos repetidos. Sin embargo, un alumno no puede rendir la misma materia más de una vez a la semana, pero una materia puede tomar más de un final en la semana.
+  
+Para calcular la nota de cada final, se debe tener en cuenta que:
+Cada ejercicio tiene el mismo peso en la nota final. Para calcularlo se puede usar la siguiente fórmula: 10 / CantidadEjercicios.
+
+• Un ejercicio bien (B) vale el ejercicio entero.
+
+• Un ejercicio regular (R) vale medio ejercicio.
+
+• Un ejercicio mal (M) no suma puntos a la nota final
+
+Formato de los archivos
+
+CSV (no se debe incluir la primera fila de encabezados, se muestra solo para explicar el ejemplo):
+
+Dni,Ej-1,Ej-2,Ej-3,…,Ej-n
+
+12345678,b,m,r,…,m
+
+87654321,b,b,b,…,r
+
+JSON:
+{ "actas": [
+ {
+ "dni": "12345678",
+ "notas": [
+ { "materia": 1115, "nota": 8 },
+ { "materia": 1116, "nota": 2 }
+ ]
+ },
+ {
+ "dni": "87654321",
+ "notas": [
+ { "materia": 1116, "nota": 9 },
+ { "materia": 1118, "nota": 7 }
+ ]
+ }
+] }
+
+### papelera.bash:
+
+Realizar un script que emule el comportamiento del comando rm, pero utilizando el concepto de “papelera de reciclaje”, es decir que, al borrar un archivo se tenga la posibilidad de recuperarlo en el futuro. 
+
+El script tendrá las siguientes opciones:
+
+• -l listar los archivos que contiene la papelera de reciclaje, informando nombre de archivo y su ubicación original.
+
+• -r [archivo] recuperar el archivo pasado por parámetro a su ubicación original.
+
+• -e vaciar la papelera de reciclaje (eliminar definitivamente)
+
+• [archivo] Sin modificador para que elimine el archivo (o sea, que lo envíe a la papelera de reciclaje). 
+
+La papelera de reciclaje deberá ser un archivo comprimido ZIP y debe estar alojada en el home del usuario que ejecuta el comando, en caso de no encontrarse debe crearla.
+
+Nota1: Tenga presente que archivos de diferentes directorios podrían tener el mismo nombre. El script debe considerar estos casos.
+
+Nota2: En caso de que se quiera recuperar un nombre de archivo que esta varias veces en la papelera, debe listar los archivos y su ubicación original y preguntar cuál se quiere recuperar.
+
