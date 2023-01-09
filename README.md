@@ -2,6 +2,14 @@
 
 ## Programación de scripts en tecnología bash
 
+### contar_subdir_mas_ele.bash:
+
+El script tiene como objetivo a partir de un directorio y un numero n dados, mostrar los n subdirectorios ordenados de mayor a menor según la cantidad de elementos que contienen en su interior. Recibe un directorio y el numero de subdirectorios finales a mostrar.
+
+ejemplo de llamado:
+
+contar_subdir_mas_ele.bash directorio 5
+
 ### corrector.bash:
 
 Realice un script que dado un archivo de texto plano (pasado por parámetro) le aplique las siguientes reglas:
