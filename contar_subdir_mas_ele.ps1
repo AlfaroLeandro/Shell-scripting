@@ -1,13 +1,4 @@
-﻿# ======================Inicio De Encabezado=======================
-
-# Nombre del script: 1_APL2.ps1
-# Número de ejercicio: 1
-# Trabajo Práctico: 2
-# Entrega: Cuarta entrega
-
-# =================================================================
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~ Integrantes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+﻿# ~~~~~~~~~~~~~~~~~~~~~~~~ Integrantes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 
 #		Nombre			|		Apellido	|	   DNI
 #		Leandro			|		Alfaro		|	43.397.288
