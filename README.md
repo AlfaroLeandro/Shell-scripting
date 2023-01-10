@@ -8,7 +8,7 @@ El script tiene como objetivo a partir de un directorio y un numero n dados, mos
 
 ejemplo de llamado:
 
-contar_subdir_mas_ele.bash directorio 5
+contar_subdir_mas_ele.ps1 directorio 5
 
 ### corrector.ps1:
 
@@ -30,7 +30,7 @@ Además, debe generar por cada archivo un reporte de corrección, con el mismo n
 
 • Cantidad de inconsistencias encontradas, diferenciadas por paréntesis dispares, signos de pregunta dispares y signos de admiración dispares. Llamamos dispares cuando se encuentra el signo o paréntesis de apertura y no el de cierre, o viceversa. Para verificar esto basta con tomar la diferencia entre los signos de apertura y cierre, sin mayor análisis sintáctico
 
-Ejemplo de llamada: ./Corrector.sh -in [archivo]
+Ejemplo de llamada: ./Corrector.ps1 -in [archivo]
 
 ### listar_duplicados.ps1:
 
