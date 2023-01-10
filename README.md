@@ -1,5 +1,7 @@
 # Shell-scripting
 
+### ¡¡Importante!!: En los otros branches se encuentran los scripts de powershell y los programas desarrollados en C para linux.
+
 ## Programación de scripts en tecnología bash
 
 ### contar_subdir_mas_ele.bash:
