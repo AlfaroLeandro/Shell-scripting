@@ -70,4 +70,22 @@ SINTAXIS
 
 ## Ahorcado online
 
+### SERVIDOR HANGMAN:
 
+Este programa permite que un cliente se conecte a este servidor para jugar al hangman.
+Recibe como parámetro el puerto que escuchará.
+Por defecto, la IP del servidor será localhost (127.0.0.1).
+
+Para cerrar este servidor se debe enviar la senal SIGUSR1.
+
+
+### CLIENTE HANGMAN:
+
+Este programa permite conectarse a un servidor local para jugar al hangman.
+Recibirá la IP y puerto del servidor a donde deberá conectarse.
+
+SINTAXIS:
+
+[Nombre del programa del servidor] [Puerto a escuchar]
+
+[Nombre del programa del cliente] [IP de servidor] [Puerto]
