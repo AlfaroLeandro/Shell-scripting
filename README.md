@@ -30,7 +30,7 @@ SINTAXIS:
 
 [nombre del programa] [N] [P]
 
-## Calculo de facturacion
+## Calculo de facturacion:
 
 Se calculará el total facturado de distintos archivos.
 
@@ -50,5 +50,24 @@ SINTAXIS:
 
 [B]
 
-## 
+## Ahorcado local
+
+### SERVIDOR HANGMAN:
+
+No recibe parametros de ningun tipo para poder jugar.
+Para cerrar este servidor se debe enviar la senal SIGUSR1.
+
+### CLIENTE HANGMAN:
+
+Este programa permite conectarse a un servidor local para jugar al hangman.
+No recibe parametros de ningun tipo para poder jugar.
+
+SINTAXIS
+
+[Nombre del programa servidor]
+
+[nombre del programa cliente]
+
+## Ahorcado online
+
 
