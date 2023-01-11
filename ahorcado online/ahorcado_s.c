@@ -1,12 +1,4 @@
 /**
-# ======================Inicio De Encabezado=======================
-
-# Nombre del script: 5_APL3_servidor.c
-# Número de ejercicio: 5
-# Trabajo Práctico: 3
-# Entrega: Tercera entrega
-
-# =================================================================
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Integrantes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #

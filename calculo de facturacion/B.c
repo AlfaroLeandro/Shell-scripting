@@ -1,12 +1,4 @@
 /**
-# ======================Inicio De Encabezado=======================
-
-# Nombre del script: 3_APL3.c
-# Número de ejercicio: 1
-# Trabajo Práctico: 3
-# Entrega: Tercera entrega
-
-# =================================================================
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Integrantes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #

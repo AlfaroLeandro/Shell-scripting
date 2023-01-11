@@ -1,12 +1,4 @@
 /**
-# ======================Inicio De Encabezado=======================
-
-# Nombre del script: 2_APL3.c
-# Número de ejercicio: 2
-# Trabajo Práctico: 3
-# Entrega: Tercera entrega
-
-# =================================================================
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Integrantes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
@@ -45,7 +37,7 @@ int n,
 pthread_t vec_hilo_m[8][2];
 struct timeval t_final_global, t_final_aux;
 
-int main(int argc, char *argv[]) // 0 n check pid0 pid1 pid2 .. pidn
+int main(int argc, char *argv[]) 
 {
     int i,
         P;
